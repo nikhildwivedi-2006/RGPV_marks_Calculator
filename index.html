@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RGPV Grade to Marks & SGPA Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>RGPV Grade to Marks & SGPA Calculator</h1>
+
+      <div class="features-list">
+        <h3>What You Can Do Here:</h3>
+
+        <ul>
+          <li>
+            <strong>Marks Calculator:</strong> Calculate actual marks that you
+            got in a exam .By enter Grades and Credit point
+          </li>
+
+          <li>
+            <strong>SGPA Calculator:</strong> Calculate Semester Grade Point
+            Average for multiple subjects
+          </li>
+
+          <li>
+            <strong>Grace Marks Check:</strong> See if you're eligible for grace
+            marks
+          </li>
+        </ul>
+      </div>
+
+      <div id="subjectInputs" class="subject-container"></div>
+
+      <div
+        id="errorMsg"
+        style="color: red; margin: 10px 0; font-weight: bold"
+      ></div>
+
+      <div class="buttons">
+        <button onclick="addSubject()">Add Subject</button>
+        <button onclick="calculateSGPA()">Calculate SGPA</button>
+        <button onclick="resetAll()">Reset</button>
+      </div>
+
+      <div id="resultsSection" class="results" style="display: none">
+        <h2>Results</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Type</th>
+              <th>Credits</th>
+              <th>Grade</th>
+              <th>Marks</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+        <div id="sgpaResult" class="sgpa"></div>
+      </div>
+
+      <h2 class="grading-title">📋 Grading System</h2>
+      <div class="grading-tables">
+        <table>
+          <caption>
+            Theory (100 marks)
+          </caption>
+          <thead>
+            <tr>
+              <th>Grade</th>
+              <th>Marks</th>
+              <th>Point</th>
+              <th>Performance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A+</td>
+              <td>91-100</td>
+              <td>10</td>
+              <td>Outstanding</td>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>81-90</td>
+              <td>9</td>
+              <td>Excellent</td>
+            </tr>
+            <tr>
+              <td>B+</td>
+              <td>71-80</td>
+              <td>8</td>
+              <td>Very Good</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>61-70</td>
+              <td>7</td>
+              <td>Good</td>
+            </tr>
+            <tr>
+              <td>C+</td>
+              <td>51-60</td>
+              <td>6</td>
+              <td>Average</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>41-50</td>
+              <td>5</td>
+              <td>Satisfactory</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>31-40</td>
+              <td>4</td>
+              <td>Marginal</td>
+            </tr>
+            <tr>
+              <td>D##</td>
+              <td>26-30</td>
+              <td>4</td>
+              <td>Grace Pass</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>0-25</td>
+              <td>0</td>
+              <td>Fail</td>
+            </tr>
+            <tr>
+              <td>I</td>
+              <td>0</td>
+              <td>0</td>
+              <td>Incomplete</td>
+            </tr>
+            <tr>
+              <td>W</td>
+              <td>0</td>
+              <td>0</td>
+              <td>Withdrawal</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <caption>
+            Practical (50 marks)
+          </caption>
+          <thead>
+            <tr>
+              <th>Grade</th>
+              <th>Marks</th>
+              <th>Point</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A+</td>
+              <td>46-50</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>41-45</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>B+</td>
+              <td>36-40</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>31-35</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>C+</td>
+              <td>26-30</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>21-25</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>20</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>D##</td>
+              <td>15-19</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>0-14</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer>RGPV SGPA Calculator | Made for RGPV Students</footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
